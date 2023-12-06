@@ -9,6 +9,7 @@ async function getProducts() {
     try {
         const response = await axios.get(`https://655c81de25b76d9884fd6913.mockapi.io/products?page=${page}&limit=${limit}&skip=${skip}`);
         const data = response.data;
+        db = data
 
         data.forEach(item => {
             const box = document.createElement('div');
